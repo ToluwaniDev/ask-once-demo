@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+  <title>Ask once: bedside</title>
+</head>
+<body class="bedside">
+  <div class="bar">
+    <h1 id="heading">What do you need?</h1>
+    <span class="bed" id="bedLabel"></span>
+  </div>
+  <main id="main" aria-live="polite"></main>
+  <footer>
+    <div class="flags" id="flags"></div>
+    <button class="btn btn-quiet" id="setupBtn" type="button">Bed setup (staff)</button>
+  </footer>
+
+  <dialog id="setup">
+    <h2>Bed setup</h2>
+    <label class="toggle">Falls risk <input type="checkbox" id="fallsRisk"></label>
+    <label class="toggle">Large text <input type="checkbox" id="largeText"></label>
+    <label class="toggle">Read aloud <input type="checkbox" id="readAloud"></label>
+    <div class="dialog-actions">
+      <button class="btn btn-quiet" type="button" id="setupCancel">Cancel</button>
+      <button class="btn btn-blue" type="button" id="setupSave">Save settings</button>
+    </div>
+  </dialog>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/bedside.js"></script>
+</body>
+</html>

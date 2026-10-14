@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+  <title>Ask once demo</title>
+</head>
+<body>
+  <div class="launch">
+    <header>
+      <div class="mark icon" id="mark"></div>
+      <h1>Ask once</h1>
+    </header>
+    <p class="lede">A smart bedside call bell. Patients tap what they need, and the request goes straight to the person who can help. Open each screen on a different device to run the demo.</p>
+
+    <div class="screens">
+      <section class="screen">
+        <h2>Bedside screen</h2>
+        <p>For the patient's tablet. Each bed has its own link.</p>
+        <ul>
+          <li><a href="/bedside.html?bed=12">Bed 12</a></li>
+          <li><a href="/bedside.html?bed=7">Bed 7</a></li>
+          <li><a href="/bedside.html?bed=3">Bed 3</a></li>
+        </ul>
+      </section>
+      <section class="screen">
+        <h2>Staff phone</h2>
+        <p>Each role only receives the requests it can meet.</p>
+        <ul>
+          <li><a href="/staff.html?role=hcsw&amp;name=Amara">HCSW (Amara)</a></li>
+          <li><a href="/staff.html?role=nurse&amp;name=Priya">Nurse (Priya)</a></li>
+          <li><a href="/staff.html?role=support&amp;name=Tom">Housekeeping (Tom)</a></li>
+          <li><a href="/staff.html?role=nic&amp;name=Grace">Nurse in charge (Grace)</a></li>
+        </ul>
+      </section>
+      <section class="screen">
+        <h2>Corridor screen</h2>
+        <p>Wall display for the low-cost option. Bed numbers and icons only.</p>
+        <ul><li><a href="/corridor.html">Open corridor screen</a></li></ul>
+      </section>
+      <section class="screen">
+        <h2>Ward dashboard</h2>
+        <p>Waits, peaks and common needs for the daily huddle.</p>
+        <ul><li><a href="/dashboard.html">Open dashboard</a></li></ul>
+      </section>
+    </div>
+
+    <section class="steps">
+      <h2>Running the live demo</h2>
+      <ol>
+        <li>Open Bed 12 on a tablet, the HCSW phone on a phone, and the corridor screen on a laptop.</li>
+        <li>On the tablet, tap Toilet. The phone buzzes and the corridor screen shows Bed 12.</li>
+        <li>On the phone, tap Accept. The tablet tells the patient Amara is coming.</li>
+        <li>Tap I'm at the bedside, then Done. The dashboard updates.</li>
+        <li>Leave a request unaccepted to watch it escalate to the nurse in charge.</li>
+      </ol>
+      <p class="note">Demo only, with dummy data. Not for use with real patients.</p>
+    </section>
+  </div>
+  <script src="/js/common.js"></script>
+  <script>document.getElementById('mark').innerHTML = AskOnce.ICONS.bell;</script>
+</body>
+</html>

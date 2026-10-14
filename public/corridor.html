@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+  <title>Ask once: corridor screen</title>
+</head>
+<body class="corridor">
+  <header>
+    <h1 id="title">Ward A: waiting now</h1>
+    <span class="clock" id="clock"></span>
+  </header>
+  <div class="tiles" id="tiles" aria-live="polite"></div>
+  <div class="legend">
+    <span style="--c: var(--hcsw)">Support workers</span>
+    <span style="--c: var(--nurse)">Nurses</span>
+    <span style="--c: var(--support)">Housekeeping and catering</span>
+    <span style="--c: var(--urgent)">Urgent</span>
+    <span style="--c: var(--danger)">Escalated to nurse in charge</span>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/corridor.js"></script>
+</body>
+</html>

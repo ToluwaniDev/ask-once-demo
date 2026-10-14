@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+  <title>Ask once: ward dashboard</title>
+</head>
+<body>
+  <div class="dash">
+    <header>
+      <h1>Ward A dashboard</h1>
+      <div class="btns">
+        <button class="btn" type="button" id="seedBtn">Load a sample day</button>
+        <button class="btn btn-quiet" type="button" id="resetBtn">Reset demo</button>
+      </div>
+    </header>
+    <div class="kpis" id="kpis"></div>
+    <div class="panels">
+      <section class="panel">
+        <h2>Requests by hour</h2>
+        <div class="hours" id="hours"></div>
+        <div class="hour-labels" id="hourLabels"></div>
+      </section>
+      <section class="panel">
+        <h2>What patients asked for</h2>
+        <div id="needs"></div>
+      </section>
+      <section class="panel wide">
+        <h2>Open now</h2>
+        <div id="open"></div>
+      </section>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

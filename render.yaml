@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ask-once-demo
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ESCALATE_1_SECONDS
+        value: "45"
+      - key: ESCALATE_2_SECONDS
+        value: "45"
